@@ -24,9 +24,9 @@ int get_size(void)
 
 void print_grid(int size)
 {
-    for (int i=1;i<size;i++)
+    for (int i=1;i<=size;i++)
     {
-        for (int j=size-i-1;j>0;j--)
+        for (int j=size-i;j>0;j--)
         {
             printf(" ");
         }
