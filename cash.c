@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int get_cents(void);
@@ -37,10 +36,11 @@ int main(void)
 
 int get_cents(void)
 {
-    int n;
+    int n=0;
     do
     {
-        n=get_int("Enter price of item: ");
+        printf("Enter price in cents: ");
+        scanf("%i", &n);
     }
     while (n<1);
     return n;
@@ -48,8 +48,8 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    int number;
-    while (cents>=25);
+    int number=0;
+    while (cents>=25)
     {
         cents-=25;
         number++;
@@ -59,8 +59,8 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    int number;
-    while (cents>=10);
+    int number=0;
+    while (cents>=10)
     {
         cents-=10;
         number++;
@@ -70,8 +70,8 @@ int calculate_dimes(int cents)
 
 int calculate_nickels(int cents)
 {
-    int number;
-    while (cents>=5);
+    int number=0;
+    while (cents>=5)
     {
         cents-=5;
         number++;
@@ -81,8 +81,8 @@ int calculate_nickels(int cents)
 
 int calculate_pennies(int cents)
 {
-    int number;
-    while (cents>=1);
+    int number=0;
+    while (cents>=1)
     {
         cents-=1;
         number++;
