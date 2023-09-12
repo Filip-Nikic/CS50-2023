@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
                 img = fopen(images_name, "w");
                 fwrite(buffer, block_size, 1, img);
                 count++;
+                free(images_name);
             }
             else if (count > 0)
             {
